@@ -1,0 +1,238 @@
+"source ~/.ideavimrc
+" :actionlist
+" :map
+
+let mapleader = ","
+
+" options
+set number
+set incsearch hlsearch
+set ignorecase smartcase
+set clipboard=unnamed
+set scrolloff=5
+set showmode
+
+" Quit insert mode
+inoremap jj <Esc>
+"inoremap jk <Esc>
+"inoremap kk <Esc>
+
+"Plugins
+set surround
+set multiple-cursors
+
+" https://gist.github.com/zchee/9c78f91cc5ad771c1f5d
+" :actionlist [pattern]
+
+"""""""""""""""""" RubyMine
+nnoremap <Leader>gt :action GotoTest<CR>
+nnoremap <leader>gr :action GotoRelated<cr>
+
+nnoremap <leader>gb :action Annotate<cr>
+
+nnoremap <leader>ff :action FindInPath<cr>
+nnoremap <leader>fu :action FindUsages<cr>
+
+"""""""""""""""""" Navigation
+nnoremap <C-e> :action RecentFiles<CR>
+
+nnoremap [c :action VcsShowPrevChangeMarker<cr>
+nnoremap ]c :action VcsShowNextChangeMarker<cr>
+nnoremap ]e :action GotoNextError<cr>
+nnoremap [e :action GotoPreviousError<cr>
+nnoremap [d :action QuickImplementations<cr>:
+nnoremap ]d :action QuickImplementations<cr>
+nnoremap <leader>ga :action GotoAction<cr>
+nnoremap <leader>gi :action GotoImplementation<cr>
+nnoremap <leader>gs :action GotoSuperMethod<cr>
+nnoremap <leader>gd :action GotoDeclaration<cr>
+
+""""""""""""""""" GoTo
+nnoremap ga :action GotoAction<CR>
+nnoremap gc :action GotoClass<CR>
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gf :action GotoFile<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gs :action GotoSymbol<CR>
+
+nnoremap <Leader>ga :action GotoAction<CR>
+nnoremap <Leader>gc :action GotoClass<CR>
+nnoremap <Leader>gd :action GotoDeclaration<CR>
+nnoremap <Leader>gf :action GotoFile<CR>
+nnoremap <Leader>gi :action GotoImplementation<CR>
+nnoremap <Leader>gs :action GotoSymbol<CR>
+
+""""""""""""""""" Search
+" Project search
+nnoremap <Leader>ps :action SearchEverywhere<CR>
+nnoremap <Leader>pf :action GotoFile<CR>
+
+""""""""""""""""" Windows
+" Window operation
+nnoremap <Leader>ww <C-W>w
+nnoremap <Leader>wd <C-W>c
+nnoremap <Leader>wj <C-W>j
+nnoremap <Leader>wk <C-W>k
+nnoremap <Leader>wh <C-W>h
+nnoremap <Leader>wl <C-W>l
+nnoremap <Leader>ws <C-W>s
+nnoremap <Leader>w- <C-W>s
+nnoremap <Leader>wv <C-W>v
+nnoremap <Leader>w\| <C-W>v
+
+" VimMotionJump{Next,Previous}
+nnoremap <c-p> <c-i>
+nnoremap <c-[> <c-t>
+nnoremap <tab> <c-w>w
+
+""""""""""""""""""" Splits
+nnoremap <Leader>oo :action MoveEditorToOppositeTabGroup<CR>
+o
+
+" Refactoring
+nnoremap <leader>re :action RenameElement<cr>
+nnoremap <leader>rf :action RenameFile<cr>
+
+" Run / Debug
+nnoremap <leader>dd :action Debug<cr>
+nnoremap <leader>,r :action Run<cr>
+nnoremap <Leader>rr :action RunClass<CR>
+
+nnoremap <leader>bb :action ToggleLineBreakpoint<cr>
+nnoremap <leader>br :action ViewBreakpoints<cr>
+
+nnorempa <leader>/ :acttion CommentByLineComment
+
+" Shortcuts
+" Regions
+" zC - close region
+" zO - open region
+
+" Multiple cursors
+map <C-n> <Plug>NextWholeOccurrence
+map <C-P> <Plug>RemoveOccurrence
+map <C-m> <Plug>SkipOccurrence
+map g<C-N> <Plug>NextOccurrence
+
+
+
+
+
+" Ideas
+
+noremap  <c-f> <c-d>
+noremap  <c-b> <c-u>
+
+nnoremap Y y$
+nnoremap Q @q
+
+nnoremap <c-w><c-c> :action VimWindowClose<cr>
+
+
+nnoremap gcc :action CommentByLineComment<cr>
+
+nnoremap <leader>su :action ShowUsages<cr>
+nnoremap <leader>cv :action ChangeView<cr>
+nnoremap <leader>ic :action InspectCode<cr>
+nnoremap <leader>oi :action OptimizeImports<cr>
+nnoremap <leader>gq :action ReformatCode<cr>
+nnoremap <leader>mv :action ActivateMavenProjectsToolWindow<cr>
+nnoremap <leader>dc :action ChooseDebugConfiguration<cr>
+nnoremap <leader>rc :action ChooseRunConfiguration<cr>
+nnoremap <leader>q  :action CloseActiveTab<cr>
+nnoremap <leader>tl Vy<cr>:action ActivateTerminalToolWindow<cr>
+vnoremap <leader>tl y<cr>:action ActivateTerminalToolWindow<cr>
+
+
+" clear the highlighted search result
+nnoremap <Leader>sc :nohlsearch<CR>
+
+nnoremap <Leader>fs :w<CR>
+
+
+nnoremap fu :action FindUsages<CR>
+nnoremap <Leader>fu :action FindUsages<CR>
+
+" Quit normal mode
+nnoremap <Leader>q  :q<CR>
+nnoremap <Leader>Q  :qa!<CR>
+
+" Move half page faster
+nnoremap <Leader>d  <C-d>
+nnoremap <Leader>u  <C-u>
+
+" Insert mode shortcut
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+inoremap <C-a> <Home>
+inoremap <C-e> <End>
+inoremap <C-d> <Delete>
+
+
+" Quit visual mode
+vnoremap v <Esc>
+
+" Redo
+nnoremap U <C-r>
+
+" Yank to the end of line
+nnoremap Y y$
+
+" quit ==> close current window
+nnoremap <Leader>q <C-W>w
+
+
+" Tab operation
+nnoremap tn gt
+nnoremap tp gT
+
+" ==================================================
+" Show all the provided actions via `:actionlist`
+" ==================================================
+
+" built in search looks better
+nnoremap / :action Find<CR>
+" but preserve ideavim search
+" nnoremap <Leader>/ /
+
+nnoremap <Leader>;; :action CommentByLineComment<CR>
+
+nnoremap <Leader>bb :action ToggleLineBreakpoint<CR>
+nnoremap <Leader>br :action ViewBreakpoints<CR>
+
+nnoremap <Leader>cv :action ChangeView<CR>
+
+nnoremap <Leader>cd :action ChooseDebugConfiguration<CR>
+
+
+nnoremap <Leader>fp :action ShowFilePath<CR>
+
+nnoremap <Leader>ic :action InspectCode<CR>
+
+nnoremap <Leader>mv :action ActivateMavenProjectsToolWindow<CR>
+
+nnoremap <Leader>oi :action OptimizeImports<CR>
+
+nnoremap <Leader>pm :action ShowPopupMenu<CR>
+
+nnoremap <Leader>rc :action RunToCursor<CR>
+nnoremap <Leader>rC :action ChooseRunConfiguration<CR>
+nnoremap <Leader>re :action RenameElement<CR>
+nnoremap <Leader>rf :action RenameFile<CR>
+
+
+nnoremap <Leader>se :action SearchEverywhere<CR>
+nnoremap <Leader>su :action ShowUsages<CR>
+nnoremap <Leader>tc :action CloseActiveTab<CR>
+nnoremap <Leader>si :action StepInto<CR>
+
+nnoremap <Leader>tb :action ToggleLineBreakpoint<CR>
+
+nnoremap <Leader>tl Vy<CR>:action ActivateTerminalToolWindow<CR>
+vnoremap <Leader>tl y<CR>:action ActivateTerminalToolWindow<CR>
+
+
+
+
