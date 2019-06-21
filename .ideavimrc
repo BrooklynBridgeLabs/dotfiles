@@ -47,6 +47,10 @@ nnoremap <leader>gi :action GotoImplementation<cr>
 nnoremap <leader>gs :action GotoSuperMethod<cr>
 nnoremap <leader>gd :action GotoDeclaration<cr>
 
+nnoremap <leader>j :action SelectIn<cr>
+
+
+
 """"""""""""""""" GoTo
 nnoremap ga :action GotoAction<CR>
 nnoremap gc :action GotoClass<CR>
@@ -114,7 +118,14 @@ map <C-P> <Plug>RemoveOccurrence
 map <C-m> <Plug>SkipOccurrence
 map g<C-N> <Plug>NextOccurrence
 
+" Misc
+nnoremap ,U :action EditorToggleCase<cr>
+nnoremap <leader>R :source ~/.ideavimrc<cr>
 
+" Ace
+nnoremap ,; :action AceAction<cr>
+
+" Command Line"
 
 
 
